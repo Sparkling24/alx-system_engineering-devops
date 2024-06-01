@@ -1,5 +1,5 @@
 # Project
-Team Project of persons, To Design a Web Infrastructure Design
+Team Project of 3 persons, To Design a Web Infrastructure Design
 
 Project done during **Full Stack Software Engineering studies** at **ALX**. It aims to learn about how to design a Web Infrastructure.
 
