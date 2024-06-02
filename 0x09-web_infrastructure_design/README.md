@@ -98,15 +98,15 @@ You must add to [2-secured_and_monitored_web_infrastructure](2-secured_and_monit
 </details>
 
 <details>
-    <summary>your full name here</summary>
+    <summary>Gift David</summary>
     <ul>
-    <li><a href="https://www.github.com/your username here">Github</a></li>
+    <li><a href="https://www.github.com/Gift101">Github</a></li>
     </ul>
 </details>
 
 <details>
-    <summary>your full name here</summary>
+    <summary>Adanna Eze</summary>
     <ul>
-    <li><a href="https://www.github.com/your username here">Github</a></li>
+    <li><a href="https://www.github.com/adannalyn">Github</a></li>
     </ul>
 </details>
