@@ -1,0 +1,41 @@
+Postmortem Report: Web Stack Outage on June 17, 2024
+
+Issue Summary:
+On June 17, 2024, our web application experienced a significant outage from 10:00 AM to 1:00 PM EDT. Users were unable to access the site, impacting service availability and causing disruptions in user transactions.
+
+Timeline:
+- 10:00 AM: Outage detected; users reported errors accessing the site.
+- 10:10 AM: Initial investigation revealed increased error rates and slow response times.
+- 10:30 AM: Determined that the issue was affecting both the front-end and back-end services.
+- 11:00 AM: Identified potential issues with database connectivity and server performance.
+- 11:30 AM: Confirmed that the problem was due to a misconfiguration in the load balancer and a bottleneck in the database queries.
+- 12:00 PM: Implemented a temporary fix by redirecting traffic to backup servers and optimizing database queries.
+- 12a:30 PM: Conducted a full system restart and applied configuration changes.
+- 1:00 PM: Service fully restored; monitoring confirmed stability.
+
+Start time: 10:00 Am
+End time: 1:00 Pm
+Total duration: 3 hours
+
+Root Cause and Resolution:
+The primary cause of the outage was a misconfigured load balancer that failed to properly distribute incoming traffic across the servers. This led to overloading of a subset of servers and caused significant performance degradation. Additionally, inefficient database queries exacerbated the issue by creating a bottleneck in data retrieval.
+
+The resolution involved several steps:
+1. Load Balancer Reconfiguration: Corrected the traffic distribution settings to ensure even load distribution.
+2. Database Optimization: Refactored and optimized slow database queries to reduce processing time.
+3. System Restart: Restarted affected servers to clear any residual issues and apply configuration updates.
+
+Corrective and Preventative Measures:
+1. Configuration Review: Implement a thorough review process for load balancer and server configurations before deployment. Regular audits will ensure configurations are aligned with performance and scalability requirements.
+2. Monitoring and Alerts: Enhance monitoring tools to detect and alert on anomalies in traffic patterns and database performance. Implement thresholds for load balancer and database metrics to trigger early warnings.
+3. Automated Testing: Develop automated tests to simulate high traffic conditions and verify load balancer behavior under stress. Include database performance tests as part of the deployment pipeline.
+4. Incident Response Plan: Update and refine the incident response plan based on lessons learned. Conduct regular drills to ensure the team can quickly identify and resolve similar issues in the future.
+
+Illustration of the Incident:
+Diagram Key:
+
+- Load Balancer: Gone on vacation
+- Backup Server: Overwhelmed and confused
+- Traffic: Bouncing around like a beach ball
+
+In conclusion, the outage was primarily due to a misconfigured load balancer and inefficient database queries. By addressing these root causes with improved configuration practices, enhanced monitoring, and more rigorous testing, we aim to prevent similar issues and ensure better service reliability in the future.
